@@ -1,6 +1,7 @@
 package com.example.news.ui;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,12 +22,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SectionClickListener {
     private RecyclerView recyclerView;
     private NewsAdapter newsAdapter;
     private List<Result> resultList = new ArrayList<>();
     private RecyclerView.LayoutManager layoutManager;
     private SectionClickListener sectionClickListener;
+    private int selectedPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,4 +66,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void itemClick(int position) {
+        selectedPosition = position;
+        Result result = resultList.get(position);
+        Toast.makeText(this,result.getPillarName(), Toast.LENGTH_LONG).show();
+
+    }
 }

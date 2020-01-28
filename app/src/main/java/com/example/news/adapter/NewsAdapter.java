@@ -25,12 +25,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
     private Context mContext;
     private SectionClickListener sectionClickListener;
 
-    public NewsAdapter(Context mContext,SectionClickListener sectionClickListener) {
+    public NewsAdapter(Context mContext, SectionClickListener sectionClickListener) {
         this.mContext = mContext;
         this.sectionClickListener = sectionClickListener;
         listResultNews = new ArrayList<>();
     }
-    public  void setData(List<Result> mlistresults){
+
+    public void setData(List<Result> mlistresults) {
         listResultNews.clear();
         listResultNews.addAll(mlistresults);
         notifyDataSetChanged();
@@ -60,7 +61,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         private TextView description;
         private ImageView imgNews;
 
-         NewsHolder(@NonNull View itemView) {
+        NewsHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.txtTitle);
             description = itemView.findViewById(R.id.txtDescription);
@@ -68,8 +69,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   sectionClickListener.itemClick(getAdapterPosition());
-                    Toast.makeText(mContext, listResultNews.get(getAdapterPosition()).getSectionName(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext, listResultNews.get(getAdapterPosition()).getSectionName(), Toast.LENGTH_LONG).show();
                 }
             });
         }
