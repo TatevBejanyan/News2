@@ -4,5 +4,5 @@
     <item android:id="@+id/progress_horizontal"
         android:title="@string/change_direction"
         app:showAsAction="always"
-        android:icon="@drawable/ic_view_column_black_24dp" />
+        android:icon="@drawable/ic_view_stream_black_24dp" />
 </menu>

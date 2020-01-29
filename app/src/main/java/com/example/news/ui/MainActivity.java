@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity implements SectionClickListe
             isGrid = !isGrid;
         }
         if (isGrid) {
-            item.setIcon(R.drawable.ic_view_column_black_24dp);
+            item.setIcon(R.drawable.ic_view_stream_black_24dp);
         } else {
-            item.setIcon(R.drawable.ic_view_headline_black_24dp);
+            item.setIcon(R.drawable.ic_view_week_black_24dp);
 
         }
 
