@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">News</string>
+    <string name="change_direction">Change direction</string>
 </resources>

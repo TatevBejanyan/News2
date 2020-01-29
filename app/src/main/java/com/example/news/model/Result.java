@@ -37,6 +37,23 @@ public class Result {
     @SerializedName("pillarName")
     @Expose
     private String pillarName;
+    private boolean redLine = false;
+
+    public boolean isHosted() {
+        return isHosted;
+    }
+
+    public void setHosted(boolean hosted) {
+        isHosted = hosted;
+    }
+
+    public boolean isRedLine() {
+        return redLine;
+    }
+
+    public void setRedLine(boolean redLine) {
+        this.redLine = redLine;
+    }
 
     public String getId() {
         return id;
